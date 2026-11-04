@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f7f5f1;
+  --paper-deep: #efeae1;
+  --ink: #11161f;
+  --muted: #5c6675;
+  --line: #e2ddd3;
+
+  --navy-900: #0a1a3d;
+  --navy-800: #0e2452;
+  --navy-700: #13306e;
+  --navy-600: #1a3b83;
+  --navy-500: #1d4391;
+  --navy-300: #6d89c9;
+  --navy-100: #e6ecf7;
+
+  --gold-600: #9a7a43;
+  --gold-500: #b08d4f;
+  --gold-400: #c9ab72;
+  --gold-200: #eee2cb;
+
+  --whatsapp: #25d366;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-navy-500: var(--navy-500);
+  --color-navy-300: var(--navy-300);
+  --color-navy-100: var(--navy-100);
+
+  --color-gold-600: var(--gold-600);
+  --color-gold-500: var(--gold-500);
+  --color-gold-400: var(--gold-400);
+  --color-gold-200: var(--gold-200);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--navy-700);
+  color: #fff;
+}
+
+/* ---------- Tipografía editorial ---------- */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.rule-gold {
+  background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+}
+
+/* ---------- Componentes ---------- */
+.card-surface {
+  background-color: #fff;
+  border: 1px solid var(--line);
+}
+
+.shadow-lift {
+  box-shadow:
+    0 1px 2px rgba(17, 22, 31, 0.04),
+    0 12px 32px -12px rgba(17, 22, 31, 0.16);
+}
+
+.shadow-lift-lg {
+  box-shadow:
+    0 2px 4px rgba(17, 22, 31, 0.05),
+    0 28px 64px -20px rgba(10, 26, 61, 0.28);
+}
+
+/* ---------- Leaflet ---------- */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #e8e4dc;
+  z-index: 0;
+}
+
+.av-marker {
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  background: var(--navy-700);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 18px -6px rgba(10, 26, 61, 0.6);
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.av-marker:hover {
+  transform: scale(1.06);
+}
+
+.av-marker--active {
+  background: var(--gold-500);
+  transform: scale(1.08);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+  box-shadow: 0 18px 44px -18px rgba(10, 26, 61, 0.45);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: 240px !important;
+}
+
+.leaflet-bar a {
+  color: var(--navy-800);
+}
+
+/* ---------- Utilidades ---------- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
