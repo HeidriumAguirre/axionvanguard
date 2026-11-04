@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Herramientas de QA en Node (CommonJS), fuera del bundle de la app:
+    "scripts/**",
   ]),
 ]);
 

@@ -49,16 +49,24 @@ export function Process() {
           </Link>
         </div>
 
-        <ol className="relative border-l border-line pl-8">
+        <ol className="relative">
+          <span
+            aria-hidden
+            className="absolute left-[21px] top-6 bottom-6 w-px bg-line sm:left-[23px]"
+          />
           {pasos.map((paso) => (
-            <li key={paso.n} className="relative pb-10 last:pb-0">
-              <span className="absolute -left-[2.4rem] grid h-12 w-12 place-items-center rounded-full border border-line bg-white font-display text-lg text-navy-700">
+            <li key={paso.n} className="relative flex gap-5 pb-10 last:pb-0">
+              <span className="z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-paper font-display text-base text-navy-700 sm:h-12 sm:w-12 sm:text-lg">
                 {paso.n}
               </span>
-              <h3 className="font-display text-2xl text-navy-900">{paso.title}</h3>
-              <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
-                {paso.text}
-              </p>
+              <div className="min-w-0 flex-1 pt-0.5 sm:pt-1">
+                <h3 className="font-display text-2xl leading-tight text-navy-900">
+                  {paso.title}
+                </h3>
+                <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
+                  {paso.text}
+                </p>
+              </div>
             </li>
           ))}
         </ol>
@@ -123,7 +131,7 @@ export function ZonesGrid() {
             <Link
               key={zona.name}
               href={`/propiedades?comuna=${encodeURIComponent(zona.name)}`}
-              className="group relative overflow-hidden rounded-lg"
+              className="group flex flex-col overflow-hidden rounded-lg bg-navy-800"
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-navy-800">
                 <Image
@@ -131,14 +139,13 @@ export function ZonesGrid() {
                   alt={zona.name}
                   fill
                   sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 100vw"
-                  className="object-cover opacity-70 transition-transform duration-[1200ms] ease-out group-hover:scale-105 group-hover:opacity-90"
+                  className="object-cover opacity-80 transition-transform duration-[1200ms] ease-out group-hover:scale-105 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-transparent" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              <div className="flex-1 p-5">
                 <p className="eyebrow text-gold-400">{zona.region}</p>
-                <h3 className="mt-2 font-display text-2xl">{zona.name}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-white/70">
+                <h3 className="mt-2 font-display text-2xl text-white">{zona.name}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-white/80">
                   {zona.text}
                 </p>
               </div>

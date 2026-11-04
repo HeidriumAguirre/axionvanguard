@@ -152,7 +152,7 @@ export default async function PropertyDetailPage({
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
               {specs.map((spec) => (
                 <div key={spec.label} className="bg-white p-5">
-                  <Icon name={spec.icon} size={18} className="text-navy-300" />
+                  <Icon name={spec.icon} size={18} className="text-navy-600" />
                   <p className="mt-3 font-display text-2xl text-navy-900">
                     {formatNumber(spec.value)}
                   </p>
@@ -207,7 +207,7 @@ export default async function PropertyDetailPage({
                       key={a}
                       className="flex items-center gap-2.5 text-sm text-navy-800"
                     >
-                      <Icon name="check" size={14} className="text-gold-500" />
+                      <Icon name="check" size={14} className="text-gold-600" />
                       {amenityLabels[a]}
                     </li>
                   ))}
@@ -281,7 +281,7 @@ export default async function PropertyDetailPage({
                 </div>
                 <div className="mt-5 flex items-center gap-4 border-t border-line pt-4 text-xs text-muted">
                   <span className="inline-flex items-center gap-1.5">
-                    <Icon name="star" size={13} className="text-gold-500" />
+                    <Icon name="star" size={13} className="text-gold-600" />
                     {agent.rating.toFixed(1)}
                   </span>
                   <span className="inline-flex items-center gap-1.5">

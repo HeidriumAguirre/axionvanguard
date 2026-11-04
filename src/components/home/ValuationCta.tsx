@@ -61,7 +61,7 @@ export function ValuationCta() {
           </div>
 
           <div className="rounded-lg border border-white/12 bg-white/[0.06] p-8 backdrop-blur-sm">
-            <p className="eyebrow text-white/50">Ejemplo de resultado</p>
+            <p className="eyebrow text-white/65">Ejemplo de resultado</p>
             <p className="mt-4 font-display text-2xl text-white">
               Casa en Reñaca · 380 m²
             </p>
@@ -94,7 +94,7 @@ export function ValuationCta() {
                 </div>
               </div>
             </div>
-            <p className="mt-6 border-t border-white/10 pt-4 text-xs leading-relaxed text-white/50">
+            <p className="mt-6 border-t border-white/10 pt-4 text-xs leading-relaxed text-white/65">
               Estimación basada en 14 comparables cerrados en Reñaca durante los
               últimos 90 días. La valorización formal se entrega tras visita a
               la propiedad.

@@ -34,10 +34,10 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-[1400px] px-4 pb-16 pt-20 sm:px-6 sm:pb-24 sm:pt-28">
         <div className="max-w-3xl">
-          <p className="eyebrow text-gold-400">
+          <p className="eyebrow text-gold-400 text-shadow">
             Corredora de propiedades · Viña del Mar
           </p>
-          <h1 className="mt-5 font-display text-[2.6rem] leading-[1.05] text-white sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="mt-5 font-display text-[2.6rem] leading-[1.05] text-white text-shadow sm:text-6xl lg:text-[4.25rem]">
             Propiedades de autor
             <span className="block italic text-gold-400">
               entre el mar y la ciudad
@@ -69,7 +69,7 @@ export function Hero() {
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="font-display text-3xl text-white">{stat.value}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-white/50">
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-white/65">
                   {stat.label}
                 </p>
               </div>

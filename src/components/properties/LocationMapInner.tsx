@@ -43,7 +43,7 @@ export default function LocationMapInner({
         <Pin position={[lat, lng]} />
       </MapContainer>
       <p className="absolute bottom-3 left-3 z-[500] inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[0.6875rem] text-navy-800 shadow-lift">
-        <Icon name="shield" size={12} className="text-gold-500" />
+        <Icon name="shield" size={12} className="text-gold-600" />
         Ubicación aproximada por seguridad
       </p>
     </div>

@@ -97,7 +97,7 @@ export function PropertyCard({
 
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-3">
-          <p className="eyebrow text-navy-300">
+          <p className="eyebrow text-navy-600">
             {operationLabels[property.operation]} ·{" "}
             {propertyTypeLabels[property.type]}
           </p>

@@ -35,7 +35,7 @@ export default function ValuationPage() {
                   key={item}
                   className="inline-flex items-center gap-2 text-sm text-navy-800"
                 >
-                  <Icon name="check" size={14} className="text-gold-500" />
+                  <Icon name="check" size={14} className="text-gold-600" />
                   {item}
                 </li>
               ))}

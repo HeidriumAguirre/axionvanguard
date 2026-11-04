@@ -125,7 +125,7 @@ export function PredictiveSearch({
             variant === "compact" ? "h-11 px-4" : "h-14 px-5"
           }`}
         >
-          <Icon name="search" size={variant === "compact" ? 16 : 18} className="shrink-0 text-navy-300" />
+          <Icon name="search" size={variant === "compact" ? 16 : 18} className="shrink-0 text-navy-600" />
           <input
             value={query}
             onChange={(e) => {

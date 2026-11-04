@@ -32,13 +32,13 @@ export function FeaturedGrid() {
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-12">
-        <article className="group relative overflow-hidden rounded-lg lg:col-span-7">
+        <article className="group relative flex flex-col overflow-hidden rounded-lg border border-line bg-white lg:col-span-7">
           <Link
             href={`/propiedades/${hero.slug}`}
             className="block"
             aria-label={`Ver ${hero.title}`}
           >
-            <div className="relative aspect-[16/11] overflow-hidden bg-paper-deep">
+            <div className="relative aspect-[4/3] overflow-hidden bg-navy-800 sm:aspect-[16/11]">
               <Image
                 src={hero.images[0]}
                 alt={hero.title}
@@ -46,34 +46,37 @@ export function FeaturedGrid() {
                 sizes="(min-width: 1024px) 58vw, 100vw"
                 className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/85 via-navy-900/20 to-transparent" />
+              <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+                <Badge tone="gold">Editorial</Badge>
+              </div>
             </div>
           </Link>
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge tone="gold">Editorial</Badge>
-              <Badge tone="dark">
-                {hero.barrio}, {hero.comuna}
-              </Badge>
-            </div>
-            <h3 className="mt-4 font-display text-3xl leading-tight text-white sm:text-4xl">
-              <Link href={`/propiedades/${hero.slug}`} className="hover:text-gold-400">
+
+          <div className="flex flex-1 flex-col p-5 sm:p-8">
+            <p className="eyebrow text-navy-600">
+              {hero.barrio}, {hero.comuna}
+            </p>
+            <h3 className="mt-2 font-display text-[1.75rem] leading-tight text-navy-900 sm:mt-3 sm:text-4xl">
+              <Link
+                href={`/propiedades/${hero.slug}`}
+                className="transition-colors hover:text-navy-600"
+              >
                 {hero.title}
               </Link>
             </h3>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
+            <p className="mt-2 max-w-xl text-[0.8125rem] leading-relaxed text-muted sm:text-sm">
               {hero.tagline}
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/80">
-              <span className="font-display text-xl text-gold-400">
+            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.8125rem] text-navy-800 sm:text-sm">
+              <span className="font-display text-xl text-navy-900">
                 {formatUF(hero.priceUF ?? 0)}
               </span>
               <span className="flex items-center gap-1.5">
-                <Icon name="ruler" size={14} />
+                <Icon name="ruler" size={14} className="text-navy-600" />
                 {hero.areaTotal.toLocaleString("es-CL")} m² de terreno
               </span>
               <span className="flex items-center gap-1.5">
-                <Icon name="bed" size={14} />
+                <Icon name="bed" size={14} className="text-navy-600" />
                 {hero.bedrooms} dormitorios
               </span>
             </div>

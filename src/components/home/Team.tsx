@@ -34,7 +34,7 @@ export function Team() {
             <p className="mt-3 text-sm leading-relaxed text-muted">{agent.bio}</p>
             <div className="mt-4 flex items-center gap-4 border-t border-line pt-4 text-xs text-navy-800">
               <span className="inline-flex items-center gap-1.5">
-                <Icon name="star" size={13} className="text-gold-500" />
+                <Icon name="star" size={13} className="text-gold-600" />
                 {agent.rating.toFixed(1)}
               </span>
               <span className="inline-flex items-center gap-1.5">

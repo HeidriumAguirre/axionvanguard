@@ -135,23 +135,23 @@ export function ContactSidebar() {
         <p className="eyebrow text-gold-600">Oficina</p>
         <ul className="mt-5 space-y-4 text-sm text-navy-800">
           <li className="flex gap-3">
-            <Icon name="pin" size={16} className="mt-0.5 shrink-0 text-navy-300" />
+            <Icon name="pin" size={16} className="mt-0.5 shrink-0 text-navy-600" />
             {siteConfig.address}
           </li>
           <li className="flex gap-3">
-            <Icon name="phone" size={16} className="mt-0.5 shrink-0 text-navy-300" />
+            <Icon name="phone" size={16} className="mt-0.5 shrink-0 text-navy-600" />
             <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-navy-600">
               {siteConfig.phone}
             </a>
           </li>
           <li className="flex gap-3">
-            <Icon name="mail" size={16} className="mt-0.5 shrink-0 text-navy-300" />
+            <Icon name="mail" size={16} className="mt-0.5 shrink-0 text-navy-600" />
             <a href={`mailto:${siteConfig.email}`} className="hover:text-navy-600">
               {siteConfig.email}
             </a>
           </li>
           <li className="flex gap-3">
-            <Icon name="calendar" size={16} className="mt-0.5 shrink-0 text-navy-300" />
+            <Icon name="calendar" size={16} className="mt-0.5 shrink-0 text-navy-600" />
             {siteConfig.hours}
           </li>
         </ul>

@@ -83,7 +83,7 @@ export function ServicesGrid() {
                     <Icon
                       name="check"
                       size={13}
-                      className="mt-0.5 shrink-0 text-gold-500"
+                      className="mt-0.5 shrink-0 text-gold-600"
                     />
                     {point}
                   </li>

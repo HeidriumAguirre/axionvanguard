@@ -12,10 +12,12 @@
   --navy-700: #13306e;
   --navy-600: #1a3b83;
   --navy-500: #1d4391;
+  --navy-400: #4a6bb0;
   --navy-300: #6d89c9;
   --navy-100: #e6ecf7;
 
-  --gold-600: #9a7a43;
+  --gold-700: #6b5329;
+  --gold-600: #7d6134;
   --gold-500: #b08d4f;
   --gold-400: #c9ab72;
   --gold-200: #eee2cb;
@@ -35,9 +37,11 @@
   --color-navy-700: var(--navy-700);
   --color-navy-600: var(--navy-600);
   --color-navy-500: var(--navy-500);
+  --color-navy-400: var(--navy-400);
   --color-navy-300: var(--navy-300);
   --color-navy-100: var(--navy-100);
 
+  --color-gold-700: var(--gold-700);
   --color-gold-600: var(--gold-600);
   --color-gold-500: var(--gold-500);
   --color-gold-400: var(--gold-400);
@@ -79,6 +83,32 @@ body {
 
 .rule-gold {
   background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+}
+
+/* ---------- Scrims sobre fotografía ---------- */
+/* Velo oscuro para garantizar contraste de texto blanco sobre fotos claras */
+.scrim-photo {
+  background: linear-gradient(
+    to top,
+    rgb(10 26 61 / 0.96) 0%,
+    rgb(10 26 61 / 0.9) 28%,
+    rgb(10 26 61 / 0.6) 58%,
+    rgb(10 26 61 / 0.3) 100%
+  );
+}
+
+.scrim-photo-soft {
+  background: linear-gradient(
+    to top,
+    rgb(10 26 61 / 0.92) 0%,
+    rgb(10 26 61 / 0.7) 40%,
+    rgb(10 26 61 / 0.25) 100%
+  );
+}
+
+/* Sombra de texto para photographs con zonas claras */
+.text-shadow {
+  text-shadow: 0 1px 2px rgb(4 12 30 / 0.55), 0 2px 12px rgb(4 12 30 / 0.35);
 }
 
 /* ---------- Componentes ---------- */

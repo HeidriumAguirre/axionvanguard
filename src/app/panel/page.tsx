@@ -140,7 +140,7 @@ export default function DashboardPage() {
             <ul className="mt-6 space-y-5">
               {mine.map((property, index) => (
                 <li key={property.id} className="flex gap-4">
-                  <span className="font-display text-2xl text-navy-300">
+                  <span className="font-display text-2xl text-navy-400">
                     0{index + 1}
                   </span>
                   <div className="min-w-0 flex-1">
