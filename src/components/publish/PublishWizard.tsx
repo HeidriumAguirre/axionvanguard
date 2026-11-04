@@ -450,7 +450,7 @@ export function PublishWizard() {
                       className="h-full w-full object-cover"
                     />
                     {index === 0 ? (
-                      <span className="absolute left-2 top-2 rounded-full bg-navy-900/85 px-2 py-0.5 text-[0.625rem] uppercase tracking-[0.1em] text-white">
+                      <span className="absolute left-2 top-2 rounded-full bg-navy-900 px-2 py-0.5 text-[0.625rem] uppercase tracking-[0.1em] text-white">
                         Portada
                       </span>
                     ) : null}

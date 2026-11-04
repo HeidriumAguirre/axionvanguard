@@ -67,7 +67,7 @@ export function Team() {
           href={`https://wa.me/${siteConfig.whatsapp}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full bg-navy-700 px-7 text-sm font-medium text-white transition hover:bg-navy-800"
+          className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full bg-[var(--whatsapp)] px-7 text-sm font-medium text-navy-900 transition hover:brightness-95"
         >
           <Icon name="whatsapp" size={17} />
           Escribir por WhatsApp

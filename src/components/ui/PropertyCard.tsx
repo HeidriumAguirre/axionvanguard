@@ -62,7 +62,7 @@ export function PropertyCard({
             </span>
           ) : null}
           {property.featured ? (
-            <span className="rounded-full bg-navy-900/85 px-2.5 py-1 text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-white backdrop-blur-sm">
+            <span className="rounded-full bg-navy-900 px-2.5 py-1 text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-white">
               Destacado
             </span>
           ) : null}
@@ -88,7 +88,7 @@ export function PropertyCard({
         </button>
 
         {property.images.length > 1 ? (
-          <span className="absolute bottom-3 right-3 z-20 inline-flex items-center gap-1 rounded-full bg-navy-900/75 px-2.5 py-1 text-[0.6875rem] text-white backdrop-blur-sm">
+          <span className="absolute bottom-3 right-3 z-20 inline-flex items-center gap-1 rounded-full bg-navy-900 px-2.5 py-1 text-[0.6875rem] text-white">
             <Icon name="camera" size={12} />
             {property.images.length}
           </span>

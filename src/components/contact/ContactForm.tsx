@@ -159,7 +159,7 @@ export function ContactSidebar() {
           href={`https://wa.me/${siteConfig.whatsapp}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[var(--whatsapp)] text-sm font-medium text-white transition hover:brightness-95"
+          className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[var(--whatsapp)] text-sm font-medium text-navy-900 transition hover:brightness-95"
         >
           <Icon name="whatsapp" size={18} />
           Escribir por WhatsApp

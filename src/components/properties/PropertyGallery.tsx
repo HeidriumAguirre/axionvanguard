@@ -38,7 +38,7 @@ export function PropertyGallery({
                 className={`rounded-full px-3 py-1 text-[0.6875rem] font-medium uppercase tracking-[0.12em] ${
                   badge.tone === "gold"
                     ? "bg-gold-500 text-navy-900"
-                    : "bg-navy-900/85 text-white backdrop-blur-sm"
+                    : "bg-navy-900 text-white"
                 }`}
               >
                 {badge.label}

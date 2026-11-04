@@ -28,7 +28,7 @@ export function PropertyActions({
         href={whatsappLink("56987654321", message)}
         target="_blank"
         rel="noreferrer noopener"
-        className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[var(--whatsapp)] px-6 text-sm font-medium text-white transition hover:brightness-95"
+        className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[var(--whatsapp)] px-6 text-sm font-medium text-navy-900 transition hover:brightness-95"
       >
         <Icon name="whatsapp" size={18} />
         Contactar agente
