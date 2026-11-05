@@ -32,13 +32,13 @@ export function FeaturedGrid() {
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-12">
-        <article className="group relative flex flex-col overflow-hidden rounded-lg border border-line bg-white lg:col-span-7">
+        <article className="group flex flex-col overflow-hidden rounded-lg border border-line bg-white lg:col-span-7">
           <Link
             href={`/propiedades/${hero.slug}`}
-            className="block"
+            className="flex flex-1 flex-col"
             aria-label={`Ver ${hero.title}`}
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-navy-800 sm:aspect-[16/11]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy-800 sm:aspect-[16/11] lg:aspect-auto lg:min-h-[20rem] lg:flex-1">
               <Image
                 src={hero.images[0]}
                 alt={hero.title}
@@ -52,7 +52,7 @@ export function FeaturedGrid() {
             </div>
           </Link>
 
-          <div className="flex flex-1 flex-col p-5 sm:p-8">
+          <div className="p-5 sm:p-8">
             <p className="eyebrow text-navy-600">
               {hero.barrio}, {hero.comuna}
             </p>
