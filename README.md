@@ -22,12 +22,29 @@ Valparaíso y Santiago.
 
 ```bash
 npm install
-npm run dev        # servidor de desarrollo en http://localhost:3000
-npm run build      # build de producción
-npm run start      # sirve el build
-npm run lint       # ESLint
-npm run typecheck  # tsc --noEmit
+npm run dev              # servidor de desarrollo en http://localhost:3000
+npm run build            # build de producción
+npm run start            # sirve el build
+npm run lint             # ESLint
+npm run typecheck        # tsc --noEmit
+npm run audit:contrast   # auditoría WCAG de contraste sobre un sitio en vivo
+npm run shots            # capturas de escritorio y móvil
 ```
+
+### Herramientas de QA visual
+
+Con Playwright se incluye un verificador de contraste que recorre el DOM,
+resuelve el color de fondo efectivo de cada texto (incluidos fondos
+translúcidos) y calcula la relación WCAG 2.1. Sirve para detectar regresiones
+como texto blanco sobre fotografía clara.
+
+```bash
+npm run audit:contrast -- https://axionvanguard.vercel.app "/,/propiedades" mobile
+npm run shots -- https://axionvanguard.vercel.app
+```
+
+`audit:contrast` acepta la URL base, las rutas separadas por comas y
+`desktop` o `mobile`.
 
 ## Rutas
 
